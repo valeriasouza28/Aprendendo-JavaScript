@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Somando números</title>
+    <style>
+      body{
+        font:normal 18pt Arial;
+        background-color:#A8848A;
+      }
+      input{
+        font:normal 18pt Arial;
+        width:100px;
+      }
+      div#res {
+        margin-top: 20px;
+      
+    </style>
+</head>
+
+<body>
+  <h1>Somando Valores</h1>
+<input type="number" name="txtn1" id="txtn1" value="" /> +<!---criar caixa de texto/número---> +
+<input type="number" name="txtn2" id="txtn2" value="" /> <!--- Criar caixa de texto/ número --->
+<input type="button"  value="Somar" onclick="somar()"/> <!--- Botão de somar --->
+<div id="res">
+  Resultado 
+</div>
+<script>
+  function somar(){
+    var tn1 =window.document.getElementById('txtn1')  //selecionar caixa de texto
+   
+    var tn2 =window.document.querySelector('input#txtn2') // selecionar caixa de texto 
+    var res=window.document.getElementById("res")
+    var n1= Number(tn1.value) // tranformar texto em número. Pois quando se vem de uma caixa de texto continua senso texto
+    var n2= Number(tn2.value) // value é o valor que tá dentro da caixa de texto
+    var s= n1+n2 // se somar sem a conversão em número ele concatena
+    res.innerHTML= `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+  }
+</script>
+</body>
+
+</html>

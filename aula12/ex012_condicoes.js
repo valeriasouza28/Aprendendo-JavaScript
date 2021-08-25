@@ -1,0 +1,3 @@
+/*Declaração de Variavéis*/
+
+var 
